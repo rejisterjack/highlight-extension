@@ -1,0 +1,375 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  width: 380px;
+  max-height: 500px;
+  margin: 0;
+  padding: 0;
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+}
+
+.container {
+  padding: 16px;
+}
+
+h1 {
+  font-size: 20px;
+  margin-top: 0;
+  margin-bottom: 16px;
+  color: #ffffff;
+  font-weight: 500;
+  border-bottom: 1px solid #333;
+  padding-bottom: 12px;
+}
+
+.controls {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 16px;
+}
+
+.highlights-container {
+  max-height: 350px;
+  overflow-y: auto;
+  border-radius: 8px;
+  background-color: #252525;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  scrollbar-width: thin;
+  scrollbar-color: #555 #252525;
+}
+
+.highlights-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.highlights-container::-webkit-scrollbar-track {
+  background: #252525;
+}
+
+.highlights-container::-webkit-scrollbar-thumb {
+  background-color: #555;
+  border-radius: 6px;
+}
+
+.highlight-item {
+  padding: 16px;
+  border-bottom: 1px solid #333;
+  position: relative;
+  transition: background-color 0.2s ease;
+}
+
+.highlight-item:hover {
+  background-color: #2a2a2a;
+}
+
+.highlight-item:last-child {
+  border-bottom: none;
+}
+
+.highlight-text {
+  font-size: 14px;
+  margin-bottom: 12px;
+  line-height: 1.5;
+  color: #ffffff;
+}
+
+.highlight-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #999;
+  align-items: center;
+}
+
+.highlight-source {
+  max-width: 70%;
+}
+
+.highlight-url {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  color: #7cb9ff;
+  margin-bottom: 4px;
+}
+
+.highlight-date {
+  color: #888;
+}
+
+.highlight-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.btn {
+  border: none;
+  border-radius: 6px;
+  padding: 8px 14px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-weight: 500;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary {
+  background-color: #4285f4;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #5295ff;
+  transform: translateY(-1px);
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-secondary {
+  background-color: #3a3a3a;
+  color: #e0e0e0;
+}
+
+.btn-secondary:hover {
+  background-color: #444;
+  transform: translateY(-1px);
+}
+
+.btn-danger {
+  background-color: #d93025;
+  color: white;
+}
+
+.btn-danger:hover {
+  background-color: #e74032;
+  transform: translateY(-1px);
+}
+
+.empty-state {
+  padding: 32px 16px;
+  text-align: center;
+  color: #999;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.empty-state-icon {
+  font-size: 32px;
+  margin-bottom: 12px;
+  color: #555;
+}
+
+.delete-btn {
+  background: rgba(217, 48, 37, 0.2);
+  border: none;
+  color: #ff6b6b;
+  cursor: pointer;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.delete-btn:hover {
+  background: rgba(217, 48, 37, 0.3);
+}
+
+.footer {
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 12px;
+  border-top: 1px solid #333;
+}
+
+.footer-info {
+  color: #777;
+  font-size: 12px;
+}
+
+.summary-container {
+  margin-top: 16px;
+  padding: 16px;
+  background-color: #252525;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.summary-container h3 {
+  margin-top: 0;
+  font-size: 16px;
+  margin-bottom: 12px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.summary-content {
+  line-height: 1.6;
+  font-size: 14px;
+  color: #e0e0e0;
+  background: #2a2a2a;
+  padding: 16px;
+  border-radius: 6px;
+  border-left: 3px solid #4285f4;
+}
+
+.summary-content h2 {
+  font-size: 18px;
+  margin-top: 16px;
+  margin-bottom: 12px;
+  color: #ffffff;
+  font-weight: 600;
+  border-bottom: 1px solid #444;
+  padding-bottom: 6px;
+}
+
+.summary-content h3 {
+  font-size: 16px;
+  margin-top: 14px;
+  margin-bottom: 10px;
+  color: #e0e0e0;
+  font-weight: 600;
+}
+
+.summary-content h4 {
+  font-size: 15px;
+  margin-top: 12px;
+  margin-bottom: 8px;
+  color: #ccc;
+  font-weight: 500;
+}
+
+.summary-content p {
+  margin: 10px 0;
+}
+
+.summary-content strong {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.summary-content em {
+  color: #bbdefb;
+}
+
+.summary-content ul,
+.summary-content ol {
+  margin: 12px 0;
+  padding-left: 20px;
+}
+
+.summary-content li {
+  margin: 6px 0;
+}
+
+.summary-content ul li {
+  list-style-type: disc;
+}
+
+.summary-content ol li {
+  list-style-type: decimal;
+}
+
+.summary-content blockquote {
+  margin: 10px 0;
+  padding: 8px 16px;
+  border-left: 3px solid #555;
+  background-color: #222;
+  font-style: italic;
+  color: #aaa;
+}
+
+.hidden {
+  display: none;
+}
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  gap: 12px;
+}
+
+.spinner {
+  border: 3px solid #333;
+  border-top: 3px solid #4285f4;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.error {
+  color: #ff6b6b;
+  padding: 12px;
+  background-color: rgba(217, 48, 37, 0.1);
+  border-radius: 6px;
+  margin: 10px 0;
+  font-size: 14px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.error-icon {
+  font-size: 18px;
+}
+
+.badge {
+  background-color: #4285f4;
+  color: white;
+  font-size: 10px;
+  padding: 3px 6px;
+  border-radius: 10px;
+  margin-left: 8px;
+  font-weight: normal;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: help;
+}
+
+.tooltip .tooltip-text {
+  visibility: hidden;
+  width: 200px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -100px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
