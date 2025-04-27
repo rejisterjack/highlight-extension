@@ -1,11 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Highlight Saver</title>
+    <link rel="stylesheet" href="styles/popup.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>
+        Your Saved Highlights <span id="highlight-count" class="badge">0</span>
+      </h1>
+
+      <div class="controls">
+        <button id="summarize-btn" class="btn btn-primary">
+          <span
+            class="material-icons"
+            style="font-size: 16px; margin-right: 6px"
+            >summarize</span
+          >
+          Summarize
+        </button>
+      </div>
+
+      <div id="highlights-container" class="highlights-container">
+        <!-- Highlights will be inserted here -->
+        <div class="empty-state" id="empty-state">
+          <div class="empty-state-icon">
+            <span class="material-icons">highlight_alt</span>
+          </div>
+          No highlights saved yet.
+          <br />Select text on any webpage and click "Save Highlight" to get
+          started.
+        </div>
+      </div>
+
+      <div id="summary-container" class="summary-container hidden">
+        <h3>
+          <span class="material-icons">auto_awesome</span>
+          AI Summary
+          <span class="tooltip">
+            <span
+              class="material-icons"
+              style="font-size: 16px; vertical-align: middle; color: #777"
+              >help_outline</span
+            >
+            <span class="tooltip-text">Powered by Groq LLaMA 3 model</span>
+          </span>
+        </h3>
+        <div id="summary-content" class="summary-content"></div>
+        <div style="display: flex; justify-content: flex-end; margin-top: 14px">
+          <button id="close-summary-btn" class="btn btn-secondary">
+            <span
+              class="material-icons"
+              style="font-size: 16px; margin-right: 6px"
+              >close</span
+            >
+            Close
+          </button>
+        </div>
+      </div>
+
+      <div class="footer">
+        <div class="footer-info" id="status-info"></div>
+        <button id="clear-all-btn" class="btn btn-danger">
+          <span
+            class="material-icons"
+            style="font-size: 16px; margin-right: 6px"
+            >delete</span
+          >
+          Clear All
+        </button>
+      </div>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
 </html>
